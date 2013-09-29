@@ -65,7 +65,8 @@ textarea {
 
 
 /* ===== Initializr Styles ==================================================
-   Author: Bradley Greenwood
+   Original Author: Bradley Greenwood
+   Updated By: Ori Ratner
    ========================================================================== */
 
 body {
@@ -128,7 +129,7 @@ body {
     /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(0, 0, 0);
     /* RGBa with 0.9 opacity */
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     /* For IE 5.5 - 7*/
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000);
     /* For IE 8*/
@@ -153,14 +154,14 @@ body {
     /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(0, 0, 0);
     /* RGBa with 0.7 opacity */
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     /* For IE 5.5 - 7*/
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)";
 }
 
-#introtext .head-sarah {
+#introtext .head-alexie {
     font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 5em;
     line-height: 100%;
@@ -171,9 +172,9 @@ body {
     margin-left: -10px;
     font-size: 0.7em;
 }
-#introtext .head-brad {
+#introtext .head-ori {
     font-family: "futura_ltbook", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     line-height: 100%;
 }
 #introtext .date {
@@ -242,7 +243,7 @@ nav ul li a::-moz-focus-inner {border:0;}
 }
 
 /* ==========================================================================
-   Brad's custom styles
+   Custom styles
    ========================================================================== */
 * { margin: 0; padding: 0; }
 html {
@@ -361,7 +362,7 @@ section h2 {
         padding: 30px 0 30px 0;
     }
 
-    #introtext .head-sarah {
+    #introtext .head-alexie {
         font-size: 7em;
     }
     #introtext .amp {
@@ -370,8 +371,8 @@ section h2 {
         font-size: 0.9em;
         margin-left: -20px;
     }
-    #introtext .head-brad {
-        font-size: 3em;
+    #introtext .head-ori {
+        font-size: 4em;
     }
     #introtext .date {
         font-size: 1.1em;
@@ -472,15 +473,15 @@ section h2 {
     WIDE: Menu
    ============ */
 
-    #introtext .head-sarah {
+    #introtext .head-alexie {
         font-size: 9em;
    }
     #introtext .amp {
         top: 0;
         font-size: 1em;
     }
-    #introtext .head-brad {
-        font-size: 4em;
+    #introtext .head-ori {
+        font-size: 5em;
     }
     #introtext .date {
         font-size: 2em;
@@ -548,15 +549,15 @@ section h2 {
         margin: 0 auto;
     }
 
-    #introtext .head-sarah {
+    #introtext .head-alexie {
         font-size: 11em;
     }
     #introtext .amp {
         top: 0;
         font-size: 1.1em;
     }
-    #introtext .head-brad {
-        font-size: 5em;
+    #introtext .head-ori {
+        font-size: 6em;
     }
     #introtext .date {
 
@@ -805,9 +806,8 @@ section h2 {
 .responsive-image.proposal {
     text-align: center;
     margin: 60px auto 60px auto;
-}
-.responsive-image.proposal img {
     border: 10px solid #090909;
+    width: 98%;
 
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
@@ -816,7 +816,7 @@ section h2 {
     border-radius: 8px;
 }
 
-img.theinn  {
+img.welfarelogo  {
 
     text-align: center;
     margin-bottom: 50px;
