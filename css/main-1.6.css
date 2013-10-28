@@ -249,13 +249,13 @@ nav a {
 
 nav li a:hover {
     color: white;
-    background: #e17d48; /* Watermelon pink: #e15962 */
+    background: #105a2d;/* #e17d48 */ /* Watermelon pink: #e15962 */
     text-decoration: none;
     outline: none;
 }
 nav li a.selected {
     color: white;
-    background: #e17d48;
+    background: #105a2d;
     text-decoration: none;
     outline: none;
 }
@@ -293,12 +293,48 @@ body {
     overflow-x: none;
 }
 
+img.fullbg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.fullbg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
 #bg-image {
     position: fixed; 
     top: -50%; 
     left: -50%; 
     width: 200%; 
     height: 200%;
+
+    /*
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background: url(../img/bg-pic.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg-pic.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg-pic.jpg', sizingMethod='scale')";
+*/
 }
 #bg-image img {
     position: absolute; 
@@ -309,10 +345,6 @@ body {
     margin: auto; 
     min-width: 50%;
     min-height: 50%;
-}
-
-#bg-container {
-
 }
 
 section {

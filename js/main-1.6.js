@@ -74,7 +74,7 @@ $(function() {
 			active_link.addClass("selected");
 
 		},
-		offset: '10%'
+		offset: '40%'
 	})
 	
 	
