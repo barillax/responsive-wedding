@@ -39,6 +39,9 @@ $(function() {
 	var top_spacing = 15;
 	var waypoint_offset = 50;
 
+  var sections = $("section");
+  var navigation_links = $("#nav ul li a");
+
 	nav_container.waypoint({
 		handler: function(event, direction) {
 			
@@ -50,16 +53,14 @@ $(function() {
 			} else {
 				nav_container.css({ 'top':'', 'height':'' });
 				nav_container.stop().removeClass("sticky").css({'position':'absolute', "bottom":nav.outerHeight()+waypoint_offset}).animate({"bottom":"20"});
-			}
+			  navigation_links.removeClass("selected");
+      }
 			
 		},
 		offset: function() {
 			return -nav.outerHeight()-waypoint_offset;
 		}
 	});
-	
-	var sections = $("section");
-	var navigation_links = $("#nav ul li a");
 	
 	sections.waypoint({
 		handler: function(event, direction) {
@@ -73,21 +74,29 @@ $(function() {
 			active_link.addClass("selected");
 
 		},
-		offset: '25%'
+		offset: '10%'
 	})
 	
 	
 	navigation_links.click( function(event) {
-
-		$.scrollTo(
-			$(this).attr("href"),
-			{
-				duration: 1000,
-				offset: { 'left':0, 'top':-0.08*$(window).height() }
-			}
-		);
-			event.preventDefault();
+      var scrollOptions = {};
+      if( !Modernizr.touch ) {
+        scrollOptions = {
+          duration: 1000,
+          offset: { 'left':0, 'top':-0.08*$(window).height() }
+        };
+      }
+  		$.scrollTo(
+  			$(this).attr("href"), scrollOptions
+  		);
+  		
+      e = event || window.event;
+      if(e.stopPropagation) e.stopPropagation();
+      if(e.preventDefault) e.preventDefault();
+      e.cancelBubble=true;
+      e.returnValue=false;
+      return false;
 	});
 
-    $('figure.responsive-image').picture();
+  $('figure.responsive-image').picture();
 });
