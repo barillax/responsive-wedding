@@ -30,7 +30,7 @@ body {
     text-shadow: none;
 }
 a {
-    color: #b1bf92;
+    color: #e15962;
     text-decoration: none;
 }
 hr {
@@ -105,13 +105,13 @@ body {
 #gmap small a,
 #gmap small a:active,
 #gmap small a:visited {
-    color: #b1bf92;
+    color: #e15962;
     text-decoration: none;
     outline: none;
 }
 
 #gmap small a:hover {
-    color: #b1bf92;
+    color: #e15962;
     text-decoration: underline;
     outline: none;
 }
@@ -124,41 +124,77 @@ body {
     position:absolute;
     bottom:20px;
     width: 100%;
-    background: black;
+    background: #7bd5a1;
     z-index: 10;
     /* Fallback for web browsers that doesn't support RGBa */
-    background: rgb(0, 0, 0);
+    background: rgb(123, 213, 161);
     /* RGBa with 0.9 opacity */
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(123, 213, 161, 0.9);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC7bd5a1, endColorstr=#CC7bd5a1);
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC7bd5a1, endColorstr=#CC7bd5a1)";
 }
 
 .title {
     color: black;
 }
+
+.flowers-upper-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: -40px;
+    margin-right: -40px;
+    height: 200px;
+
+    /* Tricky: hide it in mobile (first) then show it for others) */
+    display: none;
+}
+.flowers-bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin-bottom: -25px;
+    margin-left: -30px;
+    height: 200px;
+
+    /* Tricky: hide it in mobile (first) then show it for others) */
+    display: none;
+}
+
+section .flowers-bottom-left {
+    height: 150px;
+}
+
+section, #introtext {
+    position: relative;
+
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(253, 242, 228);
+    /* RGBa with 0.9 opacity */
+    background: rgba(253, 242, 228, 0.9);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
+}
+
+h1, .head-ori, .head-alexie, .amp {
+    color: black;
+}
+
+
 #introtext {
     display: block;
     padding: 10px 0 10px 0;
     margin-bottom: 300px;
-    background: black;
 
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-
-    /* Fallback for web browsers that doesn't support RGBa */
-    background: rgb(0, 0, 0);
-    /* RGBa with 0.7 opacity */
-    background: rgba(0, 0, 0, 0.7);
-    /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
-    /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)";
 }
 
 #introtext .head-alexie {
@@ -212,14 +248,14 @@ nav a {
 }
 
 nav li a:hover {
-    color: #fff;
-    background: #b1bf92;
+    color: white;
+    background: #e17d48; /* Watermelon pink: #e15962 */
     text-decoration: none;
     outline: none;
 }
 nav li a.selected {
-    color: #fff;
-    background: #b1bf92;
+    color: white;
+    background: #e17d48;
     text-decoration: none;
     outline: none;
 }
@@ -252,7 +288,7 @@ html {
 
 body {
     font-family: "futura_ltbook", "HelveticaNeueLTStdRegular","HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: #fff;
+    color: black;
     text-align: center;
 
 }
@@ -282,29 +318,18 @@ body {
 section {
     text-align: left;
     padding: 25px;
-    background-color: black;
     height: 100%;
     margin-top: 200px;
-    color: white;
+    color: black;
 
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-
-    /* Fallback for web browsers that doesn't support RGBa */
-    background: rgb(0, 0, 0);
-    /* RGBa with 0.7 opacity */
-    background: rgba(0, 0, 0, 0.7);
-    /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000);
-    /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)";
 }
 
 section h1 {
-
     font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 2.6em;
 
@@ -458,6 +483,10 @@ section h2 {
 
 @media only screen and (min-width: 768px) {
 
+    .flowers-upper-right, .flowers-bottom-left {
+        display: block;
+    }
+
 /* ====================
     WIDE: CSS3 Effects
    ==================== */
@@ -475,6 +504,8 @@ section h2 {
 
     #introtext .head-alexie {
         font-size: 9em;
+
+        margin-left: -40px;
    }
     #introtext .amp {
         top: 0;
@@ -845,12 +876,12 @@ div.bp .column p {
     filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 a[href^=tel] {
-    color: white;
+    color: black;
     text-decoration: none;
     outline: none;
 }
 a.email {
-    color: #b1bf92;
+    color: #e15962;
 }
 
 .thumb {
