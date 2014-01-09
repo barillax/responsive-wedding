@@ -184,6 +184,29 @@ h1, .head-ori, .head-alexie, .amp {
     color: black;
 }
 
+/*
+ * Hotel Stuff
+ */
+
+.green {
+    color: #b37137;
+}
+
+p.hotel {
+    text-align: center;
+}
+p.hotel a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-style: italic;
+}
+
+
+/*
+ * Header
+ */
 
 #introtext {
     display: block;
@@ -571,7 +594,9 @@ section h2 {
 @media only screen and (min-width: 900px) {
 
     section h1,
-    section h2 {
+    section h2,
+    section h3,
+    section h4 {
         padding: 0 20px;
     }
     section h1 {
